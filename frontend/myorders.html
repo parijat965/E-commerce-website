@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/wrrrw.png" type="image/x-icon" />
+    <title>Fission.com online shopping site</title>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/sweetalert.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="top-header">
+          <div class="th">
+            <div class="logo">
+              <a href="index.html">
+                <img src="assets/images/wrrrw.png" alt="logo" />
+              </a>
+            </div>
+            <div class="name">
+              Fission.<br />
+              <span>com</span>
+            </div>
+            <div class="searchbox">
+              <span>
+                <i class="uil uil-create-dashboard" onclick="show_cat()"></i>
+                <!-- searchbox icon -->
+                <i class="uil uil-angle-down icon__14" onclick="show_cat()"></i>
+              </span>
+    
+              <!--searc box is here-->
+              <form action="index.html" method="GET">
+                <input type="hidden" value="14" name="d" />
+                <input type="text" placeholder="Search for Products and more.." name="f" />
+                <button>
+                  <i class="uil uil-search"></i>
+                </button>
+              </form>
+              <div class="location fadeup" id="ctcnpnl">
+                <input type="text" placeholder="Search here" id="cat_search" oninput="search_cat()" />
+    
+                <ul>
+                  <li onclick="set(this)">
+                    <i class="uil uil-apps"></i>
+                    <a href="" class="cn-search">Men</a>
+                  </li>
+                  <li onclick="set(this)">
+                    <i class="uil uil-apps"></i>
+                    <a href="" class="cn-search">Women</a>
+                  </li>
+                  <li onclick="set(this)">
+                    <i class="uil uil-apps"></i>
+                    <a href="" class="cn-search">Accessories</a>
+                  </li>
+                  <li onclick="set(this)">
+                    <i class="uil uil-apps"></i>
+                    <a href="" class="cn-search">Tools</a>
+                  </li>
+                  <li onclick="set(this)">
+                    <i class="uil uil-apps"></i>
+                    <a href="" class="cn-search">Others</a>
+                  </li>
+    
+                </ul>
+              </div>
+            </div>
+    
+            <!-- right elemnets in nav -->
+    
+            <div class="rightbox">
+              <ul>
+                <li>
+                  <a href="" class="rightlink">
+                    <i class="uil uil-phone-alt"></i>
+                    1800-000-0000
+                  </a>
+                </li>
+                <li>
+                  <a href="error.html" class="rightlink">
+                    <i class="uil uil-gift"></i>
+                    Offers
+                  </a>
+                </li>
+                <li>
+                  <a href="error.html" class="rightlink">
+                    <i class="uil uil-question-circle"></i>
+                    Help
+                  </a>
+                </li>
+                <li>
+                  <a href="" class="rightlink wl">
+                    <i class="uil uil-heart icon_wishlist"></i>
+                    <span class="noti_count1">0</span>
+                  </a>
+                </li>
+                <li class="user">
+                  <a href="#" class="rightlink">
+                    <i class="uil uil-user-circle bg" onclick="show_userpanel()">
+                    </i>
+                  </a>
+                  <div class="userpanel fadeup" id="userpanel">
+                    <ul>
+                      <li>
+                        <i class="uil uil-chat-bubble-user"></i><a href="">My Account</a>
+                      </li>
+                      <li><i class="uil uil-box"></i><a href="">My Orders</a></li>
+                      <li>
+                        <i class="uil uil-heart-alt"></i><a href="">My Wishlist</a>
+                      </li>
+                      <li>
+                        <i class="uil uil-shopping-cart"></i><a href="cart.html">My Cart</a>
+                      </li>
+    
+                      <li><i class="uil uil-signin"></i><a href="login.html">Login</a></li>
+                      <li onclick=" swal('Logged out','','success')">
+                        <i class="uil uil-signout"></i>Logout
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="path">
+        <div class="container">
+          <a href="index.html">Home</a>
+          /
+          <a href="index.html">My Orders</a>
+        </div>
+      </div>
+
+      <section class="myorders">
+        <div class="headbanner">
+          <div class="userimage">
+            <img src="assets/images/img-5.jpg" alt="" />
+          </div>
+          <h4>Jhon Doe</h4>
+          <p>
+            +91 1245789630
+            <a href="#"><i class="uil uil-edit"></i></a>
+          </p>
+          <div class="earn-points">
+            <img src="assets/images/Dollar.svg" alt="" />Ballance :
+            <span>&#8377;20</span>
+          </div>
+        </div>
+        <section class="myac-body">
+          <div class="flex row">
+            <div class="left">
+              <div class="ul-wrapper">
+                <ul>
+                  <li class="active">
+                    <i class="uil uil-box"></i>
+                    <a href="">My Orders</a>
+                  </li>
+                  <li>
+                    <i class="uil uil-heart"></i>
+                    <a href="">My Wishlist</a>
+                  </li>
+                  
+                  <li>
+                    <i class="uil uil-sign-out-alt"></i>
+                    <a href="">Logout</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="right">
+              <h4><i class="uil uil-box"></i>My Orders</h4>
+              <div class="col-lg-12 col-md-12">
+                <div class="pdpt-bg">
+                  <div class="pdpt-title flex justify-between">
+
+                  </div>
+                  <div class="order-body10">
+                    <ul class="order-dtsll">
+                      <li>
+                        <div class="order-dt-img">
+                          <img src="assets/images/product/big-1.jpg" alt="" />
+                        </div>
+                      </li>
+                      <li>
+                        <div class="order-dt47">
+                          <h4>Gambo - Ludhiana</h4>
+                          <p>Delivered - Gambo</p>
+                          <div class="order-title">2 Items</div>
+                        </div>
+                      </li>
+                    </ul>
+                    <div class="total-dt">
+                      <div class="total-checkout-group">
+                        <div class="cart-total-dil">
+                          <h4>Sub Total</h4>
+                          <span>$25</span>
+                        </div>
+                        <div class="cart-total-dil pt-3">
+                          <h4>Delivery Charges</h4>
+                          <span>Free</span>
+                        </div>
+                      </div>
+                      <div class="main-total-cart">
+                        <h2>Total</h2>
+                        <span>$25</span>
+                      </div>
+                    </div>
+                    <div class="call-bill">
+                      <div class="order-bill-slip">
+                        <a href="#" class="bill-btn5 hover-btn">Cancel</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+       <section class="defaultPadding mt4 footer">
+    <div class="footer-row1">
+      <div class="container">
+        <div class="row flex">
+          <ul class="ul1">
+
+            <li>
+              <a href="#">
+                <i class="uil uil-envelope-alt"></i>
+                info@fission.com
+              </a>
+            </li>
+          </ul>
+          <ul class="ul2">
+            <li>
+              <a href="#">
+                <i class="uil uil-facebook-f"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="uil uil-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="uil uil-google"></i>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="uil uil-linkedin-alt"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-row2">
+      <div class="container">
+        <div class="row">
+          <ul class="ul1">
+            <li class="heading">
+              <h4>About</h4>
+            </li>
+            <ul class="ul-sub">
+              <li>About Us</li>
+              <li>Careers</li>
+              <li>Stories</li>
+              <li>Corporate Information</li>
+
+            </ul>
+          </ul>
+          <ul class="ul1">
+            <li class="heading">
+              <h4>Help</h4>
+            </li>
+            <ul class="ul-sub">
+              <li>Payments</li>
+              <li>Cancellations</li>
+              <li>Returns</li>
+              <li>FAQ</li>
+            </ul>
+          </ul>
+          <ul class="ul1">
+            <li class="heading">
+              <h4>Policy</h4>
+            </li>
+            <ul class="ul-sub">
+              <li>Return</li>
+              <li>Term of use</li>
+              <li>Security</li>
+              <li>Privacy</li>
+              <li>Customer realationship managment</li>
+            </ul>
+          </ul>
+          <ul class="ul1">
+            <li class="heading">
+              <h4>Download App</h4>
+            </li>
+            <ul class="ul-sub da">
+              <li class="dbnt">
+                <a href="">
+                  <img src="assets/images/svg/download-1.svg" alt="" />
+                </a>
+              </li>
+              <li class="dbnt">
+                <a href="">
+                  <img src="assets/images/svg/download-2.svg" alt="" />
+                </a>
+              </li>
+            </ul>
+            <li class="heading thd">
+              <h4><b>Payment Mode</b></h4>
+            </li>
+            <ul class="ul-sub t flex">
+              <li class="dbnt">
+                <a href="">
+                  <img src="assets/images/svg/pyicon-1.svg" alt="" />
+                </a>
+              </li>
+              <li class="dbnt">
+                <a href="">
+                  <img src="assets/images/svg/pyicon-2.svg" alt="" />
+                </a>
+              </li>
+              <li class="dbnt">
+                <a href="">
+                  <img src="assets/images/svg/pyicon-3.svg" alt="" />
+                </a>
+              </li>
+
+              <li class="dbnt">
+                <a href="">
+                  <img src="assets/images/svg/upi-ar21.svg" alt="" />
+                </a>
+              </li>
+            </ul>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-3">
+      <span> © Fission.com 2022-2023 </span>
+    </div>
+  </section>
+
+</body>
+
+</html>
